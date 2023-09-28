@@ -5,6 +5,7 @@
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-layout">Layout</a> • 
+ <a href="#-conexão-api">Conexão Api</a> •
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> •  
  <a href="#-autor">Autor</a> • 
@@ -12,9 +13,10 @@
 
 ## 📝 Sobre o projeto
 
-✒️ Conversor de moedas para pagamentos internacionais. Planejando efetuar um pagamento comercial internacional? Consulte as taxas de câmbio atualizadas em tempo real.
+ Conversor de moedas para pagamentos internacionais. Planejando efetuar um pagamento comercial internacional? Consulte as taxas de câmbio atualizadas em tempo real.
 
----
+## 🔗 Conexão Api
+ Para realizar as conversões de moedas e obter informações sobre taxas de câmbio neste projeto, utilizei a [ExchangeRate-API](https://www.exchangerate-api.com/docs/overview). Essa API fornece acesso a dados precisos e atualizados sobre moedas e câmbio, facilitando a realização de pagamentos comerciais internacionais.
 
 ## 🎨 Layout
 
@@ -41,11 +43,15 @@ O layout foi inspirado no figma currency converter e personalizado para atender 
 
 ## 📌 Como executar o projeto
 
-#### 🔗 Pré-requisitos
+####  ⏳ Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Vue.js](https://vuejs.org/guide/quick-start.html#creating-a-vue-application) e [Node.js](https://nodejs.org/en). Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
+#### ⚙️ Configuração da API
+
+Antes de utilizar a API, é necessário obter uma chave de acesso (API key) seguindo as instruções fornecidas na documentação. Esta chave deve ser mantida em segurança e nunca compartilhada publicamente. A documentação completa da API ExchangeRate-API pode ser encontrada [aqui](https://www.exchangerate-api.com/docs/overview).
+ 
 #### 🧭 Rodando a aplicação
 
 ```bash
@@ -55,6 +61,11 @@ $ git clone git@github.com:danilalucas/currency-converter.git
 $ cd currency-converter
 # Instale os pacotes necessários
 $ npm install
+# Copie o arquivo .env.example para .env
+$ cp .env.example .env
+# Insira a url base da api e a chave no arquivo .env
+VITE_API_KEY='SUA_API_KEY'
+VITE_API_BASE_URL='URL_BASE'
 # Execute a aplicação
 $ npm run dev
 # Compilar para produção
